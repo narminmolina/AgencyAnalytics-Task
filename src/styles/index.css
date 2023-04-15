@@ -1,0 +1,67 @@
+@import url('./grid.css');
+
+:root {
+  --white: #fff;
+  --black: #000;
+  --purple: #6441c6;
+  --gray: #667085;
+  --gray-2: #a7a7a7;
+ --light-gray: #e4e4e5;
+  --red: #d0311a;
+
+  background-color: #f8fafc;
+
+  color: var(--black);
+  font-family: 'Righteous', cursive;
+  font-family: 'Schibsted Grotesk', sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  font-synthesis: none;
+  color-scheme: light dark;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%; /* Allow percentage-based heights in the application */
+  padding: 0;
+  font-size: 12px;
+}
+
+/* Improve media defaults */
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Remove built-in form typography styles */
+input,
+button {
+  font: inherit;
+}
+
+/* Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
