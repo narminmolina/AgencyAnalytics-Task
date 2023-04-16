@@ -5,7 +5,7 @@ export const CloseIcon = () => {
       height="18"
       viewBox="0 0 24 24"
       fill="none"
-      stroke="var(--gray-2)"
+      stroke="var(--gray)"
       strokeWidth="2.5"
       strokeLinecap="round"
       strokeLinejoin="round"

@@ -31,6 +31,7 @@ height: 100%;
   display: flex;
   gap: 0.25rem;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .figureDetails strong {
@@ -70,11 +71,6 @@ height: 100%;
   background-color: transparent;
   border: none;
   cursor: pointer;
-}
-
-.likeButton:hover {
-  fill: var(--red);
-  stroke: var(--red);
 }
 
 .deleteButton {

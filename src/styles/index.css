@@ -5,7 +5,6 @@
   --black: #000;
   --purple: #6441c6;
   --gray: #667085;
-  --gray-2: #a7a7a7;
  --light-gray: #e4e4e5;
   --red: #d0311a;
 
@@ -81,3 +80,8 @@ h6 {
   .overlay {
 display: block;
  }}
+
+ 
+  .likeIcon:hover{
+  fill: var(--light-gray);
+}

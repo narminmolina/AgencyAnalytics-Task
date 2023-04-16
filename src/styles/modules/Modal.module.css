@@ -1,6 +1,6 @@
 .modal{
 display: none;
-width: 320px;
+width: 380px;
 position: absolute;
 top: 70%;
 left: 50%;
@@ -28,7 +28,7 @@ display: block;
 /* Mobile Small Screen*/
 @media (max-width: 420px) {
   .modal {
-    width: 280px;
+    width: 300px;
   }
 }
 
