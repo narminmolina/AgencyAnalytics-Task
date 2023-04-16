@@ -39,7 +39,6 @@
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
-/* TODO: Might add animation here */
 .tabpanel[aria-current='false'] {
   display: none;
 }

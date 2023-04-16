@@ -9,7 +9,7 @@
   outline: 0;
 }
 
-.figure:focus-visible img {
+.activeImage {
   outline: 2px solid var(--purple);
   outline-offset: 2px;
 }

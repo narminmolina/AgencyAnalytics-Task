@@ -1,5 +1,18 @@
 .main {
   width: 100%;
   padding: 0 2.5rem;
+  transition: all 0.3s ease;
+}
+
+.shrink {
+  width: 70%;
+  transition: all 0.3s ease;
+}
+
+.title {
+  margin: 1em 0;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.18;
 }
 

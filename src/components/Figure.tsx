@@ -1,5 +1,10 @@
+import { KeyboardEvent } from 'react';
+import { useSelector } from 'react-redux';
+
 import { Image } from 'types';
+import { convertBytesToMB } from 'utils';
 import { useDispatch } from 'redux/store';
+import { setAsideProps, selectActiveImage } from 'redux/reducer';
 import styles from 'styles/modules/Figure.module.css';
 
 interface FigureProps extends Image {
@@ -8,13 +13,23 @@ interface FigureProps extends Image {
 
 export const Figure = ({ id, url, tabIndex, filename, sizeInBytes, ...otherProps }: FigureProps) => {
   const dispatch = useDispatch();
+  const activeImage = useSelector(selectActiveImage);
+
+  const handleClick = () =>
+    dispatch(setAsideProps({ isAsideOpen: true, activeImage: { id, url, filename, sizeInBytes, ...otherProps } }));
+
+  const handleKeyDown = (event: KeyboardEvent<HTMLElement>) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      handleClick();
+    }
+  };
 
   return (
-    <figure className={styles.figure} tabIndex={tabIndex + 1}>
-      <img src={url} alt={filename} loading="lazy" />
+    <figure className={styles.figure} tabIndex={tabIndex + 1} onClick={handleClick} onKeyDown={handleKeyDown}>
+      <img src={url} alt={filename} loading="lazy" className={activeImage?.url === url ? styles.activeImage : ''} />
       <figcaption>
         <h2>{filename}</h2>
-        <span>{sizeInBytes} MB</span>
+        <span>{convertBytesToMB(sizeInBytes)} MB</span>
       </figcaption>
     </figure>
   );
