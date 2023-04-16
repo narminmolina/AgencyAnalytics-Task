@@ -1,0 +1,35 @@
+.modal{
+display: none;
+width: 320px;
+position: absolute;
+top: 70%;
+left: 50%;
+transform: translate(-50%, -50%);
+border-radius: 1rem;
+overflow-y: scroll;
+border: 2px solid var(--gray);
+background-color: var(--white);
+z-index: 10;
+}
+
+.closeButton {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.25rem;
+  background-color: transparent;
+  border: none;
+}
+/* Mobile */
+@media (max-width: 780px) {
+  .modal {
+display: block;
+ }
+}
+/* Mobile Small Screen*/
+@media (max-width: 420px) {
+  .modal {
+    width: 280px;
+  }
+}
+
+

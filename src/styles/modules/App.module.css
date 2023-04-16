@@ -16,3 +16,8 @@
   line-height: 1.18;
 }
 
+@media (max-width: 780px) {
+  .shrink {
+    width: 100%;
+  }
+}

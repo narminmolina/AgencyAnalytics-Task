@@ -6,6 +6,7 @@ import { classNames } from 'utils';
 import { useDispatch, useSelector } from 'redux/store';
 import { loadImages, selectIsAsideOpen } from 'redux/reducer';
 import styles from 'styles/modules/App.module.css';
+import { Modal } from 'components/Modal';
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -23,6 +24,7 @@ export const App = () => {
         <Tab />
       </main>
       <Aside isOpen={isAsideOpen} />
+      {isAsideOpen && <Modal />}
     </div>
   );
 };

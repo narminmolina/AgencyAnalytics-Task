@@ -8,6 +8,12 @@ display: flex;
   height: 100vh;
   overflow-y: scroll;
 }
+/* Mobile */
+
+@media (max-width: 780px) {
+  .figureDetails {
+height: 100%;
+ }}
 
 .figureDetails img {
   width: 100%;

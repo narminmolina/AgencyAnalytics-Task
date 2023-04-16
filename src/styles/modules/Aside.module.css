@@ -9,6 +9,10 @@
   width: 30%;
 }
 
+/* Mobile */
 
-
+@media (max-width: 780px) {
+  .aside {
+display: none;  }
+}
 
