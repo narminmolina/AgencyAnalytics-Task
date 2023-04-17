@@ -1,35 +1,23 @@
-.modal{
-display: none;
-width: 380px;
-position: absolute;
-top: 70%;
-left: 50%;
-transform: translate(-50%, -50%);
-border-radius: 1rem;
-overflow-y: scroll;
-border: 2px solid var(--gray);
-background-color: var(--white);
-z-index: 10;
+.modal {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: none;
+  width: 100%;
+  background-color: var(--white);
 }
 
 .closeButton {
   position: absolute;
   top: 0.5rem;
-  right: 0.25rem;
+  right: 0.5rem;
+  padding: 0;
   background-color: transparent;
   border: none;
 }
-/* Mobile */
+
 @media (max-width: 780px) {
   .modal {
-display: block;
- }
-}
-/* Mobile Small Screen*/
-@media (max-width: 420px) {
-  .modal {
-    width: 300px;
+    display: block;
   }
 }
-
-

@@ -1,41 +1,39 @@
-.figureDetails{
-display: flex;
+.figureDetails {
+  display: flex;
   gap: 1rem;
   flex-direction: column;
+  height: 100vh;
+  padding: 2.5rem;
   background-color: var(--white);
   border-left: 1px solid var(--light-gray);
-  padding: 2.5rem;
-  height: 100vh;
+  border-radius: 1rem;
   overflow-y: scroll;
 }
-/* Mobile */
-
-@media (max-width: 780px) {
-  .figureDetails {
-height: 100%;
- }}
 
 .figureDetails img {
   width: 100%;
-  height: 16rem;
+  height: 180px;
   border-radius: 0.75rem;
   object-fit: cover;
+  aspect-ratio: 260/180;
 }
 
 .figureDetails header {
   display: flex;
+  align-items: flex-start;
   justify-content: space-between;
+  gap: 1rem;
 }
 
 .imageHeader {
   display: flex;
   gap: 0.25rem;
   flex-direction: column;
-  overflow: hidden;
 }
 
 .figureDetails strong {
   font-weight: 500;
+  word-break: break-all;
 }
 
 .figureDetails em,
@@ -68,6 +66,10 @@ height: 100%;
 }
 
 .likeButton {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  padding: 0;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -86,4 +88,24 @@ height: 100%;
 .deleteButton:hover {
   border: 2px solid var(--gray);
   font-weight: 500;
+}
+
+@media (max-width: 992px) {
+  .figureDetails {
+    padding: 2rem;
+  }
+  .imageInformation li {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 780px) {
+  .figureDetails {
+    height: 100%;
+  }
+
+  .figureDetails img {
+    height: unset;
+  }
 }

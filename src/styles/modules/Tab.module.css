@@ -3,7 +3,7 @@
   gap: 2rem;
   width: 100%;
   margin-bottom: 2em;
-  border-bottom: 2px solid var(--light-gray);
+  border-bottom: 1px solid var(--light-gray);
 }
 
 .tabButton {
@@ -26,7 +26,7 @@
 .active::after {
   content: '';
   position: absolute;
-  bottom: -2px;
+  bottom: -1px;
   display: block;
   width: 100%;
   height: 2px;
@@ -43,9 +43,20 @@
   display: none;
 }
 
-/* Mobile */
+@media (max-width: 992px) {
+  .tabpanel {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 780px) {
   .tabpanel {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 580px) {
+  .tabpanel {
+    grid-template-columns: 1fr;
   }
 }

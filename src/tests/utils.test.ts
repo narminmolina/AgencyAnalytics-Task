@@ -12,7 +12,7 @@ describe('convertBytesToMB', () => {
 describe('classNames', () => {
   test('should concatenate class names correctly', () => {
     expect(classNames('foo', 'bar', 'baz')).toBe('foo bar baz');
-    expect(classNames('foo', undefined, 'bar', null, 'baz')).toBe('foo bar baz');
+    expect(classNames('foo', undefined, 'bar', null, 'baz', false)).toBe('foo bar baz');
     expect(classNames()).toBe('');
   });
 });

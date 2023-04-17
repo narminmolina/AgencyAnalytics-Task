@@ -28,8 +28,13 @@ export const FigureDetails = () => {
     url,
   } = activeImage;
 
-  const handleDeleteButtonClick = () => dispatch(setDeleteImage(id));
   const handleFavoriteButtonClick = () => dispatch(setImageAsFavorited(id));
+
+  const handleDeleteButtonClick = () => {
+    if (window.confirm('Are you sure you want to delete this image?')) {
+      dispatch(setDeleteImage(id));
+    }
+  };
 
   return (
     <div className={styles.figureDetails}>

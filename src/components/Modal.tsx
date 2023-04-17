@@ -6,7 +6,6 @@ import { setAsideProps } from 'redux/reducer';
 
 export const Modal = () => {
   const dispatch = useDispatch();
-
   const handleCloseButtonClick = () => dispatch(setAsideProps({ isAsideOpen: false, activeImage: null }));
 
   return (
