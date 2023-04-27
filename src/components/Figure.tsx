@@ -35,6 +35,7 @@ export const Figure = ({ id, url, tabIndex, filename, sizeInBytes, ...otherProps
         src={url}
         alt={filename}
         loading="lazy"
+        data-type="figure-image"
         className={classNames(activeImage?.url === url && styles.activeImage)}
       />
       <figcaption>
